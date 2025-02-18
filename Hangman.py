@@ -1,10 +1,11 @@
 import random as rdm
 import string
+import getpass
 
 def valid_word():
     valid = False
     while valid == False:
-        word = (input("Input a valid word to begin the game: ").upper())
+        word =(getpass.getpass("Input a valid word to begin the game: ").upper())
         word_letters = set(word)
         alphabet = set(string.ascii_uppercase)
         valid = all(e in alphabet for e in word_letters)
